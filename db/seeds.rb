@@ -27,7 +27,7 @@ employee_eleanor = Employee.create(
     last_name: "Rigby",
     email: "eleanor@rigby.com",
     phone: "4158892203",
-    role: 1
+    role: :caretaker
 )
 
 Note.create(
