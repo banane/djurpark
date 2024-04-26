@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_26_171920) do
     t.string "species", null: false
     t.string "name", null: false
     t.integer "status"
-    t.bigint "habitat_id", null: false
+    t.bigint "habitat_id"
     t.jsonb "dietary_requirements"
     t.jsonb "feeding_times"
     t.jsonb "tasks"

@@ -22,12 +22,39 @@ elephant = Animal.create(
     habitat: habitat_grasslands
 )
 
+monkey = Animal.create(
+    name: "JoJo",
+    species: "Capuchin monkey",
+    feeding_times: ["5 PM", "10 PM]"],
+    tasks: {"daily": ["feeding", "playing", "grooming"]},
+    status: :healthy,
+    dietary_requirements: { "daily":["oranges", "nuts"], "treats": ["corn"] }, 
+    habitat: habitat_forest
+)
+
+raven = Animal.create(
+    name: "Belle",
+    species: "Common Raven",
+    feeding_times: ["5 PM", "10 PM]"],
+    tasks: {"daily": ["feeding"]},
+    status: :injured,
+    dietary_requirements: { "daily":["seeds"] }, 
+)
+
 employee_eleanor = Employee.create(
     first_name: "Eleanor",
     last_name: "Rigby",
     email: "eleanor@rigby.com",
     phone: "4158892203",
     role: :caretaker
+)
+
+employee_vega = Employee.create(
+    first_name: "Suzanne",
+    last_name: "Vega",
+    email: "suzanne@vega.com",
+    phone: "4158823303",
+    role: :vet
 )
 
 Note.create(
@@ -37,7 +64,20 @@ Note.create(
 )
 
 Note.create(
-    message: "We need to plant more trees here becuase the monkeys are tearing them down.",
+    message: "We need to plant more trees here because the monkeys are tearing them down.",
     employee: employee_eleanor,
     notable: habitat_forest
 )
+
+Note.create(
+    message: "Monkeys are eating too many trees.",
+    employee: employee_vega,
+    notable: monkey
+)
+
+Note.create(
+    message: "Recovering well in the infirmary.",
+    employee: employee_vega,
+    notable: raven
+)
+

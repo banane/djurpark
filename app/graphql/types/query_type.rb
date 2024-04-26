@@ -18,14 +18,19 @@ module Types
       ids.map { |id| context.schema.object_from_id(id, context) }
     end
 
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+
+    field :getAnimals, [Types::AnimalType], null: true, description: "Fetches all the animals" do
+      argument :in_habitat, Boolean, required: false, default_value: true, description: "Returns animals in their habitat"
+      argument :needing_attention, Boolean, required: false, default_value: false, description: "Returns those animals needing attention due to illness or injury"
+    end
+
+   
+    def getAnimals(in_habitat:, needing_attention:)   
+      habitat_sql = in_habitat ? 'habitat_id IS NOT NULL' : 'habitat_id IS NULL'
+      status = needing_attention ? !:healthy : :healthy
+      Animal.where(habitat_sql).where(status: status).includes(:notes) 
+      # TODO: eager load employee for notes to avoid n+1
     end
   end
 end

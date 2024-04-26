@@ -4,7 +4,7 @@ class CreateAnimals < ActiveRecord::Migration[7.1]
       t.string :species, null: false
       t.string :name, null: false
       t.integer :status
-      t.references :habitat, null: false
+      t.references :habitat
       t.jsonb :dietary_requirements
       t.jsonb :feeding_times
       t.jsonb :tasks
