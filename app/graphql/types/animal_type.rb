@@ -6,7 +6,7 @@ module Types
     field :species, String, null: false
     field :name, String, null: false
     field :status, String
-    field :habitat_id, Integer
+    field :habitat, GraphQL::Types::JSON
     field :dietary_requirements, GraphQL::Types::JSON
     field :feeding_times, GraphQL::Types::JSON
     field :tasks, GraphQL::Types::JSON
@@ -23,6 +23,10 @@ module Types
           "created_at": note.created_at
         }
       end
+    end
+
+    def habitat
+      object.habitat
     end
   end
 end

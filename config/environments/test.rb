@@ -15,6 +15,11 @@ Rails.application.configure do
   # this is usually not necessary, and can slow down your test suite. However, it's
   # recommended that you enable it in continuous integration systems to ensure eager
   # loading is working properly before deploying your code.
+  # config.active_record.encryption.primary_key = 'test'
+  # config.active_record.encryption.deterministic_key = 'test'
+  # config.active_record.encryption.key_derivation_salt = 'test'
+
+  config.active_record.encryption.encrypt_fixtures = true
   config.eager_load = ENV["CI"].present?
 
   # Configure public file server for tests with Cache-Control for performance.
