@@ -16,7 +16,6 @@ elephant = Animal.create(
     name: "Cora",
     species: "Asian Elephant",
     feeding_times: ["10am", "3 PM]"],
-    tasks: {"daily": ["cleaning","feeding","playing"]},
     status: :healthy,
     dietary_requirements: { "treats":["apples"], "daily": ["grass": "2 ton", "bark": ["bushel"], "leaves":["2 bushels"] ] }, 
     habitat: habitat_grasslands
@@ -26,7 +25,6 @@ monkey = Animal.create(
     name: "JoJo",
     species: "Capuchin monkey",
     feeding_times: ["5 PM", "10 PM]"],
-    tasks: {"daily": ["feeding", "playing", "grooming"]},
     status: :healthy,
     dietary_requirements: { "daily":["oranges", "nuts"], "treats": ["corn"] }, 
     habitat: habitat_forest
@@ -36,7 +34,6 @@ raven = Animal.create(
     name: "Belle",
     species: "Common Raven",
     feeding_times: ["5 PM", "10 PM]"],
-    tasks: {"daily": ["feeding"]},
     status: :injured,
     dietary_requirements: { "daily":["seeds"] }, 
 )
@@ -46,6 +43,7 @@ employee_eleanor = Employee.create(
     last_name: "Rigby",
     email: "eleanor@rigby.com",
     phone: "4158892203",
+    tasks: {"daily":["feeding", "cleaning", "grooming"]},
     role: :caretaker
 )
 
@@ -54,6 +52,7 @@ employee_vega = Employee.create(
     last_name: "Vega",
     email: "suzanne@vega.com",
     phone: "4158823303",
+    tasks: {"daily":["checkups", "blood pressure"], "weekly":["parasite checks", "respitory"]},
     role: :vet
 )
 

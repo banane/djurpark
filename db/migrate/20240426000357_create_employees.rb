@@ -6,6 +6,7 @@ class CreateEmployees < ActiveRecord::Migration[7.1]
       t.string :email
       t.string :phone
       t.integer :role
+      t.jsonb :tasks
 
       t.timestamps
     end

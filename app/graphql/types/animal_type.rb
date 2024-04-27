@@ -15,7 +15,15 @@ module Types
     field :notes, GraphQL::Types::JSON
 
     def notes
-      object.notes.map{ |note| note }
+      object.notes.map do |note|
+        {
+          "message": note.message,
+          "employee": "#{note.employee.first_name} #{note.employee.last_name}",
+          "employee_id": note.employee.id,
+          "created_at": note.created_at
+        }
+      end
+      
     end
   end
 end
