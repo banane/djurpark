@@ -1,5 +1,11 @@
 # Description
 A zoo app to manage animals, habitats, and personnel (employees) securely
+
+Ability to get all animals that need assistance, or are in or out of habitat, `getAnimals` (see screenshots for examples)
+- View all associated models in requests
+- Create note, related to an animal or habitat
+- Create an animal with nested associations
+
 # About
 
 - Rails 7.1.3.2
@@ -10,21 +16,24 @@ A zoo app to manage animals, habitats, and personnel (employees) securely
   
 1.`bundle install`
 
-1.`bundle exec rake db:create && rake db:migrate && rake db:seed`
+2.`bundle exec rake db:create && rake db:migrate && rake db:seed`
 
 # Run tests
 
 1.`bundle exec rake db:test:prepare && bundle exec rspec`
 
-(Fixtures are used for tests)
-
-
-# Diagram/outline
-<img width="222" alt="Screenshot 2024-04-27 at 1 12 01 PM" src="https://github.com/banane/djurpark/assets/94928/5f58fc55-0204-4e18-b62a-2c60b7026009">
+# Entity Relationship Diagram
+<img width="604" alt="Screenshot 2024-04-27 at 2 43 46 PM" src="https://github.com/banane/djurpark/assets/94928/39273403-7314-4acf-8141-4f4d72fd46d5">
 
 # Screenshots
+* getAnimals
 <img width="1183" alt="Screenshot 2024-04-27 at 1 18 22 PM" src="https://github.com/banane/djurpark/assets/94928/f7ee825e-09f7-4cb4-8f0b-cdde9c382169">
-<img width="1181" alt="Screenshot 2024-04-27 at 1 18 30 PM" src="https://github.com/banane/djurpark/assets/94928/95ed61d8-981b-4fb5-b08a-6dd1a9d5bc2c">
+
+* createAnimal
+<img width="1232" alt="Screenshot 2024-04-27 at 2 16 53 PM" src="https://github.com/banane/djurpark/assets/94928/625d2163-18a6-47f6-beab-41e3afcedea0">
+
+* createNote
+  <img width="1220" alt="Screenshot 2024-04-27 at 2 25 41 PM" src="https://github.com/banane/djurpark/assets/94928/20f35292-8227-4747-8fa1-f91f6ca737c5">
 
 
 # Requirements
