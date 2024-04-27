@@ -1,0 +1,5 @@
+employee_caretaker:
+  id: 1
+  first_name: Eleanor
+  last_name: Rigby
+  role: <%= Employee.roles[:caretaker] %>

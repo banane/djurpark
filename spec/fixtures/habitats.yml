@@ -1,0 +1,4 @@
+grasslands_habitat:
+  id: 1
+  name: Grasslands
+  descriptors: { "temperature": ["hot"], "humidity": ["dry"]}

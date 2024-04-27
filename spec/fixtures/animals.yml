@@ -1,0 +1,25 @@
+animal_healthy_in_habitat: 
+  id: 1
+  name: Bethany
+  species: Asian Jaguar
+  status: <%=Animal.statuses[:healthy]%>
+  habitat_id: 1
+
+animal_healthy_out_of_habitat: 
+  id: 2
+  name: Coco
+  species: Asian Elephant
+  status: <%=Animal.statuses[:healthy]%>
+
+animal_not_healthy_in_habitat: 
+  id: 3
+  name: Penny
+  species: California Mountain Lion
+  status: <%=Animal.statuses[:injured]%>
+  habitat_id: 1
+
+animal_not_healthy_out_of_habitat: 
+  id: 4
+  name: Gerald
+  species: Capuchin Monkey
+  status: <%=Animal.statuses[:injured]%>
