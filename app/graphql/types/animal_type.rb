@@ -5,7 +5,7 @@ module Types
     field :id, ID, null: false
     field :species, String, null: false
     field :name, String, null: false
-    field :status, Integer
+    field :status, String
     field :habitat_id, Integer
     field :dietary_requirements, GraphQL::Types::JSON
     field :feeding_times, GraphQL::Types::JSON
@@ -23,7 +23,6 @@ module Types
           "created_at": note.created_at
         }
       end
-      
     end
   end
 end

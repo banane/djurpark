@@ -38,8 +38,16 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ]
+  gem "faker", "~> 3.3"
+  gem "rspec", "~> 3.13"
+  gem "rspec-rails", "~> 6.1"
+  gem "httpclient", "~> 2.8"
+  gem "net-http", "~> 0.4.1"  
+  gem "json", "~> 2.7"
+  gem "uri", "~> 0.13.0"
+  gem "pry", "~> 0.14.2"
+  gem "factory_bot_rails", "~> 6.4"
+
 end
 
 group :development do
@@ -52,3 +60,7 @@ end
 gem "graphql", "~> 2.3"
 
 gem "sprockets-rails", "~> 3.4"
+
+
+
+

@@ -7,7 +7,6 @@ class CreateAnimals < ActiveRecord::Migration[7.1]
       t.references :habitat
       t.jsonb :dietary_requirements
       t.jsonb :feeding_times
-      t.jsonb :tasks
 
       t.timestamps
     end

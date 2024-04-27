@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  status: 1
-  dietary_requirements: MyText
-  feeding_times: MyText
-  tasks: MyText
+  name: 'Joe Biggs'
+  species: "Treetop Squirrel"
+  status: :healthy
+  dietary_requirements: {"daily": ["wheat","grasses"], "treats":["apples"]}
+  feeding_times: {"daily": ["10 AM", "3 PM"]}
 
 two:
-  status: 1
-  dietary_requirements: MyText
-  feeding_times: MyText
-  tasks: MyText
+  name: 'Benny'
+  species: "Ostrich"
+  status: :injured
+  dietary_requirements: {"daily": ["wheat","grasses"], "treats":["apples"]}
+  feeding_times: {"daily": ["10 AM", "3 PM"]}

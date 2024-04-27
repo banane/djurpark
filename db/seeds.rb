@@ -27,7 +27,6 @@ monkey = Animal.create(
     feeding_times: ["5 PM", "10 PM]"],
     status: :healthy,
     dietary_requirements: { "daily":["oranges", "nuts"], "treats": ["corn"] }, 
-    habitat: habitat_forest
 )
 
 raven = Animal.create(
@@ -36,6 +35,15 @@ raven = Animal.create(
     feeding_times: ["5 PM", "10 PM]"],
     status: :injured,
     dietary_requirements: { "daily":["seeds"] }, 
+)
+
+rhino = Animal.create(
+    name: "Julius",
+    species: "White Rhino",
+    feeding_times: ["5 PM", "10 PM]"],
+    status: :sick,
+    dietary_requirements: { "daily":["seeds"] }, 
+    habitat: habitat_grasslands
 )
 
 employee_eleanor = Employee.create(

@@ -28,8 +28,8 @@ module Types
    
     def getAnimals(in_habitat:, needing_attention:)   
       habitat_sql = in_habitat ? 'habitat_id IS NOT NULL' : 'habitat_id IS NULL'
-      status = needing_attention ? !:healthy : :healthy
-      Animal.where(habitat_sql).where(status: status).includes(:notes) 
+      status_logic = needing_attention ? [:injured, :sick] : :healthy
+      Animal.all.where(status: status_logic).where(habitat_sql).includes(notes: :employee) 
       # TODO: eager load employee for notes to avoid n+1
     end
   end
